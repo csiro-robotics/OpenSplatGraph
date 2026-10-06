@@ -1,0 +1,247 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.link-block .button.is-static-coming-soon {
+  cursor: default;
+  opacity: 0.85;
+}
+
+/* Method name emphasis */
+.textsc {
+  font-variant: normal;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+
+/* Bulma `.content p` adds ~1em top margin after figures; tighten caption under figure rows */
+.content p.figure-caption {
+  margin-top: 0.35rem;
+}
+
+/* Alternating full-bleed section bands */
+.section.section-alt {
+  background-color: #fafafa;
+}
+
+.section .title.is-3 {
+  margin-bottom: 1.25rem;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+/* Fluid title size; allow natural wrapping */
+h1.title.is-1.publication-title {
+    font-family: 'Google Sans', sans-serif;
+    font-size: clamp(1.35rem, 2.2vw + 0.75rem, 2.75rem);
+    line-height: 1.25;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.teaser-figure {
+  width: 90%;
+  height: auto;
+}
+
+.coming-soon-panel {
+  width: 100%;
+  border-radius: 8px;
+  background: #f4f4f4;
+  border: 1px dashed #bbb;
+  padding: 3rem 1.5rem;
+}
+
+.coming-soon-label {
+  margin: 0 0 0.5rem;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.coming-soon-text {
+  margin: 0;
+  color: #666;
+}
+
+/* Side-by-side video comparison slider (kept for a later second clip) */
+.video-compare {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  user-select: none;
+  touch-action: none;
+  background: #111;
+  cursor: col-resize;
+}
+
+.video-compare video {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  object-fit: fill;
+}
+
+.video-compare-base {
+  position: relative;
+  z-index: 1;
+}
+
+.video-compare-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.video-compare-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.video-compare-slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: #fff;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.video-compare-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #2ecc71;
+  border: 3px solid #fff;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  font-size: 0.95rem;
+}
+
+.video-compare-label {
+  position: absolute;
+  bottom: 0.85rem;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.video-compare-label-left {
+  left: 0.85rem;
+}
+
+.video-compare-label-right {
+  right: 0.85rem;
+}
+
+.demo-video {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background: #111;
+}

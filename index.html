@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception.">
+  <meta name="keywords"
+    content="3D Gaussian Splatting, 3D Scene Graph, Open-Vocabulary Scene Understanding, Robot Perception">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/csiro-robotics" target="_blank" rel="noopener noreferrer">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://csiro-robotics.github.io/Ilov3Splat/" target="_blank"
+              rel="noopener noreferrer">
+              Ilov3Splat
+            </a>
+            <a class="navbar-item" href="https://csiro-robotics.github.io/OpenSplatGraph/">
+              OpenSplatGraph
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <span class="textsc">OpenSplatGraph</span>:
+              From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com.au/citations?user=MELpg_AAAAAJ">Binh Long
+                  Nguyen</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.au/citations?user=18HsR5EAAAAJ">Kien Nguyen</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.au/citations?user=VpaJsNQAAAAJ">Clinton Fookes</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.au/citations?user=QAVcuWUAAAAJ">Peyman Moghadam</a><sup>1,2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Queensland University of Technology,</span>
+              <span class="author-block"><sup>2</sup>CSIRO Robotics</span>
+            </div>
+
+            <h2 class="subtitle is-4" style="color: #8B0000;">Accepted at ACCV 2026</h2>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <span class="button is-normal is-rounded is-dark is-static-coming-soon" aria-disabled="true">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Coming Soon)</span>
+                  </span>
+                </span>
+                <span class="link-block">
+                  <span class="button is-normal is-rounded is-dark is-static-coming-soon" aria-disabled="true">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Coming Soon)</span>
+                  </span>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/csiro-robotics/OpenSplatGraph"
+                    class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener noreferrer">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser. -->
+  <section class="section section-alt">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-centered">
+            <img class="teaser-figure" src="./static/images/comparison.png"
+              alt="Comparison of dense semantic maps and scene graphs for open-vocabulary 3D scene understanding">
+            <p class="has-text-justified figure-caption">
+              <strong>TL;DR:</strong>
+              <span class="textsc">OpenSplatGraph</span> builds persistent 3D scene graphs directly from an online
+              open-vocabulary dense map, enabling high-fidelity perception, language grounding, relational reasoning,
+              and downstream robotic tasks within a single system.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract. -->
+  <section class="section" id="Abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Dense 3D mapping with semantic understanding is essential for robotic perception in complex environments.
+              Recent 3D Gaussian Splatting-based mapping approaches enable high-fidelity geometry and efficient
+              open-vocabulary perception, but typically represent semantics as unstructured feature fields that limit
+              object-centric reasoning. In contrast, 3D scene graphs explicitly model objects and their relationships
+              for structured reasoning, but are commonly constructed from sparse geometric representations that do not
+              fully exploit dense semantic maps. In this work, we present
+              <strong><span class="textsc">OpenSplatGraph</span></strong>, a unified framework that constructs
+              persistent 3D scene graphs directly from an online Gaussian-based open-vocabulary semantic map. The
+              proposed framework augments the dense semantic map with a reliability-aware semantic field that maintains
+              lightweight observation statistics for confidence-aware, query-conditioned object extraction. Extracted
+              object instances are associated with persistent graph nodes, allowing object attributes and relationships
+              to be incrementally updated across observations and queries. By tightly coupling dense semantic mapping
+              with persistent object-centric representations, our framework supports both language-guided object
+              grounding and structured relational reasoning while preserving the geometric fidelity of Gaussian-based
+              mapping. Comprehensive evaluations on standard 3D scene understanding benchmarks and real-world robotic
+              experiments demonstrate that <span class="textsc">OpenSplatGraph</span> achieves competitive performance
+              for online open-vocabulary perception and downstream robotic tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method. -->
+  <section class="section section-alt" id="Method">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content">
+            <img src="./static/images/overview.png" alt="Overview of OpenSplatGraph">
+            <p class="has-text-justified figure-caption">
+              <strong>An overview of <span class="textsc">OpenSplatGraph</span>.</strong>
+              Starting from a multi-view RGB-D sequence, the framework incrementally constructs an online
+              open-vocabulary dense semantic map with reliability-aware semantic fusion. Extracted object instances are
+              associated with persistent identities and accumulated into a 3D scene graph with closed-set spatial and
+              open-set VLM relations, supporting semantic segmentation, object grounding, and robotic navigation and
+              manipulation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiments. -->
+  <section class="section" id="Experiments">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Experiments</h2>
+          <div class="content has-text-justified">
+            <h3 class="title is-4">3D Semantic Segmentation</h3>
+            <img src="./static/images/rendering.png"
+              alt="Qualitative results of 3D semantic segmentation on ScanNet and Replica">
+            <p class="has-text-centered figure-caption">
+              Qualitative results of 3D semantic segmentation on the ScanNet and Replica datasets.
+              <span class="textsc">OpenSplatGraph</span> produces spatially coherent object instances with improved
+              boundary alignment under the online open-vocabulary setting.
+            </p>
+
+            <h3 class="title is-4">Open-Vocabulary 3D Scene Graph</h3>
+            <img src="./static/images/graph.png"
+              alt="Qualitative visualization of open-vocabulary 3D scene graph construction on Replica">
+            <p class="has-text-centered figure-caption">
+              Qualitative visualization of open-vocabulary 3D scene graph construction on the Replica dataset,
+              including closed-set spatial relations and open-set semantic predicates.
+            </p>
+
+            <h3 class="title is-4">Real-world Robotic Experiments</h3>
+            <img src="./static/images/navigation.png"
+              alt="Real-world robotic navigation experiments with OpenSplatGraph">
+            <p class="has-text-centered figure-caption">
+              Real-world robotic navigation experiments with <span class="textsc">OpenSplatGraph</span>.
+              The framework constructs an online open-vocabulary dense map and supports language-guided navigation in
+              indoor environments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video. -->
+  <section class="section section-alt" id="Video">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Video</h2>
+          <div class="content has-text-centered">
+            <div class="coming-soon-panel" aria-label="Demonstration video coming soon">
+              <p class="coming-soon-label">Coming Soon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acknowledgements. -->
+  <section class="section" id="Acknowledgements">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
+          <div class="content has-text-justified">
+            <p>
+              This work was supported in part by the Australian Research Council Discovery Project under Grant
+              DP250103634, and in part by the Commonwealth Scientific and Industrial Research Organisation (CSIRO). The
+              authors acknowledge continued support from the CSIRO's Embodied AI Cluster.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BibTeX. -->
+  <section class="section section-alt" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3">BibTeX</h2>
+      <pre><code>@inproceedings{nguyen2026opensplatgraph,
+  author    = {Nguyen, Binh Long and Nguyen, Kien and Fookes, Clinton and Moghadam, Peyman},
+  title     = {OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for Open-Vocabulary Robot Perception},
+  booktitle = {Asian Conference on Computer Vision (ACCV)},
+  year      = {2026}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://github.com/csiro-robotics/OpenSplatGraph" target="_blank"
+          rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Project page for "OpenSplatGraph: From Dense Semantic Maps to Structured Scene Graphs for
+              Open-Vocabulary Robot Perception".
+            </p>
+            <p>
+              Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+            <!-- <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                International License</a>.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
