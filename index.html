@@ -208,31 +208,156 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3 has-text-centered">Experiments</h2>
           <div class="content has-text-justified">
-            <h3 class="title is-4">3D Semantic Segmentation</h3>
-            <img src="./static/images/rendering.png"
-              alt="Qualitative results of 3D semantic segmentation on ScanNet and Replica">
-            <p class="has-text-centered figure-caption">
-              Qualitative results of 3D semantic segmentation on the ScanNet and Replica datasets.
-              <span class="textsc">OpenSplatGraph</span> produces spatially coherent object instances with improved
-              boundary alignment under the online open-vocabulary setting.
-            </p>
+            <div class="experiment-panel">
+              <h3 class="title is-4">3D Semantic Segmentation</h3>
+              <img src="./static/images/rendering.png"
+                alt="Qualitative results of 3D semantic segmentation on ScanNet and Replica">
+              <p class="has-text-centered figure-caption">
+                Qualitative results of 3D semantic segmentation on the ScanNet and Replica datasets.
+                <span class="textsc">OpenSplatGraph</span> produces spatially coherent object instances with improved
+                boundary alignment under the online open-vocabulary setting.
+              </p>
 
-            <h3 class="title is-4">Open-Vocabulary 3D Scene Graph</h3>
-            <img src="./static/images/graph.png"
-              alt="Qualitative visualization of open-vocabulary 3D scene graph construction on Replica">
-            <p class="has-text-centered figure-caption">
-              Qualitative visualization of open-vocabulary 3D scene graph construction on the Replica dataset,
-              including closed-set spatial relations and open-set semantic predicates.
-            </p>
+              <div id="scannet-carousel" class="carousel results-carousel">
+                <div class="item">
+                  <video muted playsinline loop autoplay controls>
+                    <source src="./static/videos/scannet_scene0000_00.mp4" type="video/mp4">
+                  </video>
+                  <p class="scene-label">scene0000_00</p>
+                </div>
+                <div class="item">
+                  <video muted playsinline loop autoplay controls>
+                    <source src="./static/videos/scannet_scene0062_00.mp4" type="video/mp4">
+                  </video>
+                  <p class="scene-label">scene0062_00</p>
+                </div>
+                <div class="item">
+                  <video muted playsinline loop autoplay controls>
+                    <source src="./static/videos/scannet_scene0070_00.mp4" type="video/mp4">
+                  </video>
+                  <p class="scene-label">scene0070_00</p>
+                </div>
+                <div class="item">
+                  <video muted playsinline loop autoplay controls>
+                    <source src="./static/videos/scannet_scene0097_00.mp4" type="video/mp4">
+                  </video>
+                  <p class="scene-label">scene0097_00</p>
+                </div>
+                <div class="item">
+                  <video muted playsinline loop autoplay controls>
+                    <source src="./static/videos/scannet_scene0347_00.mp4" type="video/mp4">
+                  </video>
+                  <p class="scene-label">scene0347_00</p>
+                </div>
+                <div class="item">
+                  <video muted playsinline loop autoplay controls>
+                    <source src="./static/videos/scannet_scene0590_00.mp4" type="video/mp4">
+                  </video>
+                  <p class="scene-label">scene0590_00</p>
+                </div>
+              </div>
+              <p class="has-text-centered figure-caption">
+                Open-vocabulary 3D semantic segmentation demos on ScanNet scenes.
+              </p>
+            </div>
 
-            <h3 class="title is-4">Real-world Robotic Experiments</h3>
-            <img src="./static/images/navigation.png"
-              alt="Real-world robotic navigation experiments with OpenSplatGraph">
-            <p class="has-text-centered figure-caption">
-              Real-world robotic navigation experiments with <span class="textsc">OpenSplatGraph</span>.
-              The framework constructs an online open-vocabulary dense map and supports language-guided navigation in
-              indoor environments.
-            </p>
+            <div class="experiment-panel">
+              <h3 class="title is-4">Open-Vocabulary 3D Scene Graph</h3>
+              <img src="./static/images/graph.png"
+                alt="Qualitative visualization of open-vocabulary 3D scene graph construction on Replica">
+              <p class="has-text-centered figure-caption">
+                Qualitative visualization of open-vocabulary 3D scene graph construction on the Replica dataset,
+                including closed-set spatial relations and open-set semantic predicates.
+              </p>
+
+              <div class="columns is-variable is-3 scene-graph-demos">
+                <div class="column">
+                  <div class="demo-clip">
+                    <video muted playsinline loop autoplay controls>
+                      <source src="./static/videos/graph_nodes.mp4" type="video/mp4">
+                    </video>
+                    <p class="scene-label">Nodes</p>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="demo-clip">
+                    <video muted playsinline loop autoplay controls>
+                      <source src="./static/videos/graph_edges.mp4" type="video/mp4">
+                    </video>
+                    <p class="scene-label">Edges</p>
+                  </div>
+                </div>
+              </div>
+              <p class="has-text-centered figure-caption">
+                Demo clips of persistent object nodes and relational edges in the constructed 3D scene graph.
+                Top-30 nodes and top-50 edges by confidence are shown.
+              </p>
+            </div>
+
+            <div class="experiment-panel experiment-panel-wide">
+              <h3 class="title is-4">Real-world Robotic Experiments</h3>
+              <img src="./static/images/navigation.png"
+                alt="Real-world robotic navigation experiments with OpenSplatGraph">
+              <p class="has-text-centered figure-caption">
+                Real-world robotic navigation experiments with <span class="textsc">OpenSplatGraph</span>.
+                The framework constructs an online open-vocabulary dense map and supports language-guided navigation in
+                indoor environments.
+              </p>
+
+              <h4 class="title is-5 has-text-centered robot-demo-subtitle">Online map reconstruction</h4>
+              <div class="columns is-variable is-3 mapping-layout">
+                <div class="column is-5">
+                  <div class="demo-clip">
+                    <video muted playsinline loop autoplay controls>
+                      <source src="./static/videos/robot_mapping_02.mp4" type="video/mp4">
+                    </video>
+                    <p class="scene-label">Robot scanning the scene</p>
+                  </div>
+                </div>
+                <div class="column is-7 mapping-layout-main-col">
+                  <div class="demo-clip mapping-layout-main">
+                    <video muted playsinline loop autoplay controls>
+                      <source src="./static/videos/robot_mapping_01.mp4" type="video/mp4">
+                    </video>
+                    <p class="scene-label">Online map construction</p>
+                  </div>
+                </div>
+              </div>
+              <p class="has-text-centered figure-caption">
+                Online reconstruction of the open-vocabulary dense semantic map during exploration.
+              </p>
+
+              <h4 class="title is-5 has-text-centered robot-demo-subtitle">Language-guided navigation</h4>
+              <div class="columns is-variable is-3 robot-demo-row">
+                <div class="column">
+                  <div class="demo-clip">
+                    <video muted playsinline loop autoplay controls>
+                      <source src="./static/videos/robot_nav_sit_toys.mp4" type="video/mp4">
+                    </video>
+                    <p class="scene-label scene-label-wrap">Find a place to sit and play with toys.</p>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="demo-clip">
+                    <video muted playsinline loop autoplay controls>
+                      <source src="./static/videos/robot_nav_red_ball.mp4" type="video/mp4">
+                    </video>
+                    <p class="scene-label scene-label-wrap">Find a red ball in the meeting room.</p>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="demo-clip">
+                    <video muted playsinline loop autoplay controls>
+                      <source src="./static/videos/robot_nav_fruit_waste.mp4" type="video/mp4">
+                    </video>
+                    <p class="scene-label scene-label-wrap">Find a place to dispose of fruit waste.</p>
+                  </div>
+                </div>
+              </div>
+              <p class="has-text-centered figure-caption">
+                Language-guided navigation to queried targets in the reconstructed environment.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -246,9 +371,12 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3 has-text-centered">Video</h2>
           <div class="content has-text-centered">
-            <div class="coming-soon-panel" aria-label="Demonstration video coming soon">
-              <p class="coming-soon-label">Coming Soon</p>
-            </div>
+            <video class="demo-video" controls playsinline preload="metadata">
+              <source src="./static/videos/OpenSplatGraph_ACCV26_SuppVideo.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered figure-caption">
+              Supplementary video for <span class="textsc">OpenSplatGraph</span>.
+            </p>
           </div>
         </div>
       </div>

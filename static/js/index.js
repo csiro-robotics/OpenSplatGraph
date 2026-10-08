@@ -118,20 +118,28 @@ $(document).ready(function() {
       $(".navbar-menu").toggleClass("is-active");
     });
 
-    var options = {
-			slidesToScroll: 1,
-			slidesToShow: 3,
-			loop: true,
-			infinite: true,
-			autoplay: false,
-			autoplaySpeed: 3000,
-    }
-
     if (typeof bulmaCarousel !== 'undefined') {
-      bulmaCarousel.attach('.carousel', options);
+      bulmaCarousel.attach('#scannet-carousel', {
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        loop: true,
+        infinite: true,
+        autoplay: false,
+        navigation: true,
+        pagination: true,
+      });
     }
 
     if (typeof bulmaSlider !== 'undefined') {
       bulmaSlider.attach();
     }
+
+    // Ensure muted demo clips start playing (browsers may skip some autoplay videos).
+    document.querySelectorAll('.demo-clip video, .results-carousel video').forEach(function(video) {
+      video.muted = true;
+      var playPromise = video.play();
+      if (playPromise && playPromise.catch) {
+        playPromise.catch(function() {});
+      }
+    });
 })
