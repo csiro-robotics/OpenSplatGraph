@@ -8,8 +8,8 @@
 <sup>1</sup>Queensland University of Technology&emsp;&emsp;&emsp;<sup>2</sup>CSIRO Robotics
 <br>
 
-<a href=""><img src='https://img.shields.io/badge/Paper-Coming_Soon-red' alt='Paper Coming Soon'></a>
-<a href=""><img src='https://img.shields.io/badge/arXiv-Coming_Soon-b31b1b' alt='arXiv Coming Soon'></a>
+<a href="https://arxiv.org/pdf/2610.07569.pdf"><img src='https://img.shields.io/badge/Paper-PDF-red' alt='Paper PDF on arXiv'></a>
+<a href="https://arxiv.org/abs/2610.07569"><img src='https://img.shields.io/badge/arXiv-2610.07569-b31b1b' alt='arXiv abstract'></a>
 <a href="https://csiro-robotics.github.io/OpenSplatGraph"><img src='https://img.shields.io/badge/Project_Page-OpenSplatGraph-green' alt='Project Page'></a>
 <a href=""><img src='https://img.shields.io/badge/Code-Coming_Soon-blue' alt='Code Coming Soon'></a>
 </div>
@@ -20,7 +20,8 @@ This repository hosts materials for **OpenSplatGraph**, a unified framework that
 ## News
 
 - **September 2026:** OpenSplatGraph is accepted to ACCV 2026.
-- Paper, arXiv, and code will be updated when available.
+- **October 2026:** [arXiv preprint](https://arxiv.org/abs/2610.07569) is available.
+- Code will be updated when available.
 
 
 ## Installation
